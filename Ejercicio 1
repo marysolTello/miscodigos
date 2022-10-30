@@ -1,0 +1,42 @@
+package com.mycompany.mavenproject2;
+public class Mavenproject2 {
+    public static void main(String[] args) {
+        //Acá declaro las variables. El int es para los enteros y el doule para los reales
+        //En una misma línea puedo declarar y asignar un valor a una variable
+        int n1 = (int) (Math.floor(Math.random()*10 + 1));
+        int n2 = (int) (Math.floor(Math.random()*10 + 1)); 
+        int sum, rest, mult;
+        float div;
+        //Out es afuera, es decir, que va a mostrar lo que el programa tiene que imprimir para que el usuario lo vea
+        System.out.print ("El primer número es " + n1 + ", y el segundo " + n2);
+        sum=n1+n2;
+        //if actúa igual que el si/sino en PSeInt 
+        //Veo cuál es el número más grande para que me haga la resta y la división
+        /*if (n1 > n2) {
+                rest = n1-n2;
+                div=(float)n1/n2;
+        }
+        else if (n1 < n2) {
+               rest = n2-n1;
+               div=(float)n2/n1;
+        }
+        else if (n1==n2) {
+               rest = n2-n1;
+               div=(float)n2/n1;
+        }*/
+        if (n1 > n2) 
+	{
+	rest=n1-n2;
+	div=(float)n1/n2;
+        }
+        else {
+        	rest=n2-n1;
+		div=(float)n2/n1;
+    	}        
+        mult=n1*n2;
+        System.out.print("\nLa suma de los número es " + sum);
+        System.out.print("\nLa resta de los números es " + rest);
+        System.out.print("\nLa multiplicación de los números es " + mult);
+        System.out.print("\nLa división de los números es " + div);
+    }
+}
