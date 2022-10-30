@@ -1,0 +1,31 @@
+package com.mycompany.ejercicio5;
+import java.util.Scanner;
+public class Ejercicio5 {
+    public static void main(String[] args) {
+        //inicializo los acumuladores que me van a contar la cantidad de billetes que se van a sacar de cada uno
+        int retiro, cant1000=0, cant500=0, cant200=0, cant100=0;
+        Scanner imput = new Scanner(System.in);
+        System.out.print("Ingrese el saldo que desea retirar");
+        retiro=imput.nextInt();
+        //Se ve si la cantidad es mayor a cada uno de los números de billete
+        //Si se cumple la condición, se va restando la cantidad a la que equivale el billete
+        while(retiro>=1000){
+            cant1000++;
+            retiro=retiro-1000;
+        }while (retiro>=500){
+            cant500++;
+            retiro=retiro-500;
+        }while (retiro>=200){
+           cant200++;
+           retiro=retiro-200;
+       }while (retiro>=100){
+           cant100++;
+           retiro=retiro-100;
+       }
+       //Luego se muestran los acumuladores que contaron la cantidad de billetes
+        System.out.println("La cantidad de billetes de 1000 son: "+cant1000);
+        System.out.println("La cantidad de billetes de 500 son: "+cant500);
+        System.out.println("La cantidad de billetes de 200 son: "+cant200);
+        System.out.println("La cantidad de billetes de 100 son: "+cant100);
+    }
+}
