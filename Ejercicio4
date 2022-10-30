@@ -1,0 +1,25 @@
+package com.mycompany.ejercicio4;
+//siempre lo debo poner acá arriba
+import java.util.Scanner;
+public class Ejercicio4 {
+    public static void main(String[] args) {
+        int segundos, horas, minutos;
+        //acá yo lo que hago es crear el scanner que me va a permitir ingresar datos por teclado
+        Scanner imput=new Scanner(System.in);
+        System.out.print("Introduzca la cantidad de segundos");
+        //guardo en segundos lo que se introdujo por teclado
+        //acordate que el next va acompañado del tipo de variavle que se va a ingresar
+        segundos=imput.nextInt();
+        //los segundos se dividen por 3600 que es la cantidad de segundos que tiene una hora
+        //eso me da como resultado la cantidad de horas a la que equivale
+        horas=segundos/3600;
+        //a los números decimales, es decir, al resto de la división los guardo en segundos para tener la nueva cantidad de segundos que me quedaron
+        segundos %= 3600;
+        //los segundos se dividen por 60 que es la cantidad de segundos que tiene un minuto
+        //eso me da como resultado la cantidad de minutos a la que equivale
+        minutos= segundos/60;
+        //a los números decimales, es decir, al resto de la división los guardo en segundos para tener la nueva cantidad de segundos que me quedaron
+        segundos %= 60;
+        System.out.println("La cantidad de segundos ingresada equivale a " +horas+ " horas, " +minutos+ " minutos y " +segundos+ " segundos");
+    }
+}
