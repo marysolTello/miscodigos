@@ -1,0 +1,24 @@
+package com.mycompany.ejercicio2;
+import java.util.Scanner;
+public class Ejercicio2 {
+    public static void main(String[] args) {
+        //el string usa para declarar variables de tipo caracter
+        String nombre;
+        int nota1, nota2, nota3;
+        double p;
+        //scanner es una función a la que llamamos para que se lean los valores introducidos por teclado
+        Scanner imput=new Scanner(System.in);
+        System.out.print("Introduzca su nombre ");
+        //Como es del tipo caracter, e escribe line
+        nombre=imput.nextLine();
+        System.out.print("\nIntroduzca las notas que obtuvo el alumno ");
+        //y como acá se introducieron números, se pone int
+        nota1=imput.nextInt();
+        nota2=imput.nextInt();
+        nota3=imput.nextInt();
+        //acá simplemente calculo el promedio
+        p=(nota1+nota2+nota3)/3;
+        //y acá muestro el nombre del alumno con sus notas
+        System.out.print("El alumno " + nombre + " obtuvo un promedio de " + p);
+    }
+}
