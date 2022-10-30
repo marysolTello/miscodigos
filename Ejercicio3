@@ -1,0 +1,14 @@
+package com.mycompany.ejercicio3;
+import java.util.Scanner;
+public class Ejercicio3 {
+    public static void main(String[] args) {
+        //Igual que en el ejercicio anterior, debo llamar a una función para que me lea las variables introducidas por teclado
+        int horas, tsueldo;
+        Scanner imput = new Scanner(System.in);
+        System.out.print("Introduzca la cantidad de horas que trabajó");
+        horas=imput.nextInt();
+        //la cantidad de horas introducidas se multiplican por el valor de la hora
+        tsueldo=horas*350;
+        System.out.print("El sueldo total del trabajador es de " + tsueldo);
+    }
+}
