@@ -1,0 +1,21 @@
+package com.mycompany.ejercicio6;
+import java.util.Scanner;
+public class Ejercicio6 {
+    public static void main(String[] args) {
+        int horas, minutos;
+        Scanner imput=new Scanner(System.in);
+        System.out.print("Ingrese la cantidad de horas");
+        horas=imput.nextInt();
+        System.out.print("Ingrese la cantidad de minutos");
+        minutos=imput.nextInt();
+        //evalúo si la cantidad de horas supera a 12
+        if (horas >= 12){
+            //en caso de ser así, le resto 12 para que me lo muestre en formato de 12 horas
+           horas=horas-12;
+           //y le agrego el pm o am según el caso
+           System.out.print("La hora es " +horas+ ":" +minutos+ " p. m.");                 
+        } else {
+           System.out.print("La hora es " +horas+ ":" +minutos+ " a. m.");
+        }    
+    }
+}
